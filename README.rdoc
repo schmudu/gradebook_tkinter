@@ -1,0 +1,9 @@
+====
+To run unit tests run the following command in the terminal:
+  python3 -m unittest discover
+
+====
+To run the application from the command line run the following command:
+  PYTHONPATH=/Users/patrick/Documents/dev/python/gradebook/ python3 src/main.py 
+
+Note the PYTHONPATH is appending the path to the home directory (change as needed)
