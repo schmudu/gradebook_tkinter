@@ -1,5 +1,7 @@
 import tkinter as tk
 
+from src.controller.menu_controller import MenuController
+
 class MainMenu(tk.Menu):
   def __init__(self, master):
     super().__init__(master)
@@ -11,5 +13,7 @@ class MainMenu(tk.Menu):
     menu_bar.add_cascade(label="Test", menu=file_menu)
     master.config(menu=menu_bar)
 
+    self.menu_controller = MenuController()
+
   def hello(self):
-    print("Hello")
+    self.menu_controller.add_class()
