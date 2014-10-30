@@ -8,4 +8,4 @@ def hello():
 if __name__ == "__main__":
   root = tk.Tk()
   MainMenu(master=root)
-  main_view = MainView(master=root).mainloop()
+  main_view = MainView(parent_window=root).mainloop()
