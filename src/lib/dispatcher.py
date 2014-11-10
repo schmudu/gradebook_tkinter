@@ -1,5 +1,5 @@
 class Dispatcher:
-  def __init__(self):
+  def init(self):
     self.observer_events = {}
 
   def add_observer(self, observer, event):

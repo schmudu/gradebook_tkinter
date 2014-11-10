@@ -9,10 +9,12 @@ class ApplicationModel(Dispatcher):
     if not cls._instance:
       cls._instance = super(ApplicationModel, cls).__new__(
                           cls, *args, **kwargs)
+      cls._instance.init()
     return cls._instance
 
-  def __init__(self):
-    super().__init__()
+  def init(self):
+    # call dispatcher init
+    super().init()
 
   def add_class(self):
     self.notify_observers(ApplicationModel.EVENT_ADD_CLASS)
