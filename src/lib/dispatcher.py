@@ -9,7 +9,7 @@ class Dispatcher:
       raise ValueError('Event must be supplied')
     else:
       # init 
-      if(event not in self.observer_events):
+      if(event not in self._observer_events):
         self._observer_events[event] = []
 
       # check for duplicates

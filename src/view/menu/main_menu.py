@@ -13,7 +13,7 @@ class MainMenu(tk.Menu):
     menu_bar.add_cascade(label="Class", menu=file_menu)
     parent_window.config(menu=menu_bar)
 
-    self.menu_controller = MenuController()
+    self.menu_controller = MenuController(parent_window=parent_window)
 
   def add_class(self):
     self.menu_controller.add_class()
