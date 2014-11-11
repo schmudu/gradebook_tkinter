@@ -1,4 +1,5 @@
 import tkinter as Tk
+from src.view.courses.new_course_dialog import NewCourseDialog
 
 class DialogController:
   _instance = None
@@ -18,4 +19,4 @@ class DialogController:
         raise ValueError("DialogController does not need to be passed arguments after initialization.")
 
   def add_class(self):
-    print("need to show class view")
+    NewCourseDialog(self.parent_window, "Add New Course")
