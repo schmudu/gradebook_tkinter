@@ -9,7 +9,6 @@ class ApplicationModel(Dispatcher):
     if not cls._instance:
       cls._instance = super(ApplicationModel, cls).__new__(
                           cls, *args, **kwargs)
-      cls._instance.init()
     return cls._instance
 
   def init(self):
