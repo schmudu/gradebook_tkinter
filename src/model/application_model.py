@@ -12,8 +12,7 @@ class ApplicationModel(Dispatcher):
     return cls._instance
 
   def init(self):
-    # call dispatcher init
-    super().init()
+    print("==Initializing model.")
 
   def add_class(self):
     self.notify_observers(ApplicationModel.EVENT_ADD_CLASS)

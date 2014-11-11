@@ -1,6 +1,5 @@
 import tkinter as tk
-
-from src.controller.menu_controller import MenuController
+from src.controller.dialog_controller import DialogController
 
 class MainMenu(tk.Menu):
   def __init__(self, parent_window):
@@ -13,7 +12,6 @@ class MainMenu(tk.Menu):
     menu_bar.add_cascade(label="Class", menu=file_menu)
     parent_window.config(menu=menu_bar)
 
-    self.menu_controller = MenuController(parent_window=parent_window)
 
   def add_class(self):
-    self.menu_controller.add_class()
+    DialogController().add_class()
