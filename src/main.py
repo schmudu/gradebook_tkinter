@@ -2,10 +2,10 @@ from src.controller.dialog_controller import DialogController
 from src.view.main_view import MainView
 from src.view.menu.main_menu import MainMenu
 from src.model.application_model import ApplicationModel
-import tkinter as tk
+import tkinter as Tk
 
 if __name__ == "__main__":
-  root = tk.Tk()
+  root = Tk.Tk()
 
   # init model
   app_model = ApplicationModel()
@@ -16,9 +16,9 @@ if __name__ == "__main__":
 
   # init views
   MainMenu(parent_window=root)
-  main_view = MainView(parent_window=root)
+  MainView(parent_window=root).grid()
+  Tk.mainloop()
 
   # post init
 
   # start
-  main_view.mainloop()
