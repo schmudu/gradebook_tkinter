@@ -16,7 +16,9 @@ if __name__ == "__main__":
 
   # init views
   MainMenu(parent_window=root)
-  MainView(parent_window=root).grid()
+  MainView(parent_window=root).grid(row=0, sticky="nsew")
+  root.grid_rowconfigure(0, weight=1)
+  root.grid_columnconfigure(0, weight=1)
   Tk.mainloop()
 
   # post init
